@@ -9,7 +9,6 @@ def options(opt):
 
 def configure(ctx):
     ctx.load('compiler_c')
-    pass
 
 def build(ctx):
     ctx.program(source='src/foo.c', target='bar')
