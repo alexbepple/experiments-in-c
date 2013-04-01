@@ -1,5 +1,8 @@
-# WAF
-.lock*
-.waf*
+### WAF
+.lock-waf*
 *tar.bz2
 build/
+
+# *nix
+.waf-*/
+waf-*/
