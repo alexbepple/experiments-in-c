@@ -1,0 +1,5 @@
+# WAF
+.lock*
+.waf*
+*tar.bz2
+build/
