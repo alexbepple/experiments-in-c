@@ -6,3 +6,7 @@ build/
 # *nix
 .waf-*/
 waf-*/
+
+
+### Eclipse
+Debug/
