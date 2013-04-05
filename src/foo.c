@@ -1,8 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
- 
+#include "Bar.h"
+
 int foo() {
-    return 42;
+    return bar();
 }
 
 int main()

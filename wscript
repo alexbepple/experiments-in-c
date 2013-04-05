@@ -16,15 +16,19 @@ def build(ctx):
     ctx.stlib(
     	source='contrib/gtest/gtest-all.cc', 
     	includes='contrib', 
-    	target='libgtest') 
+    	target='Gtest')
     ctx.stlib(
-    	source='src/Bar.cpp',
+    	source= ctx.path.ant_glob('src/*.c'),
     	includes='src',
-    	target='libBar')
-    ctx.program(source='src/foo.c', target='bar')
+    	target='MainLib')
+    ctx.program(
+    	source=ctx.path.ant_glob('src/*.c'), 
+    	includes='src', 
+    	target='Main')
     ctx.program(
     	features='test',
-    	source='test/AllTests.cpp test/BlubbTest.cpp test/BarTest.cpp',
-    	target='bartest',
+    	source=ctx.path.ant_glob(['test/*.cpp']),
+    	target='testMain',
     	includes='contrib src',
-    	use='libgtest libBar')
+    	use='Gtest MainLib',
+    	stlibpath=['build'])
