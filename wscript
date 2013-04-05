@@ -18,7 +18,7 @@ def build(ctx):
     	includes='contrib', 
     	target='Gtest')
     ctx.stlib(
-    	source= ctx.path.ant_glob('src/*.c'),
+    	source=ctx.path.ant_glob('src/*.c'), 
     	includes='src',
     	target='MainLib')
     ctx.program(
