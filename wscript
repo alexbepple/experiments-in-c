@@ -18,13 +18,14 @@ def build(ctx):
     	includes='contrib', 
     	target='Gtest')
     ctx.stlib(
-    	source=ctx.path.ant_glob('src/*.c'), 
+    	source=ctx.path.ant_glob('src/*.c', excl=['Foo.c']), 
     	includes='src',
     	target='MainLib')
     ctx.program(
-    	source=ctx.path.ant_glob('src/*.c'), 
+    	source='src/Foo.c', 
     	includes='src', 
-    	target='Main')
+    	target='Main',
+        use='MainLib')
     ctx.program(
     	features='test',
     	source=ctx.path.ant_glob(['test/*.cpp']),
