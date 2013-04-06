@@ -76,7 +76,7 @@
 							<tool id="cdt.managedbuild.tool.gnu.archiver.macosx.base.1208800056" name="GCC Archiver" superClass="cdt.managedbuild.tool.gnu.archiver.macosx.base.2126968277"/>
 							<tool id="cdt.managedbuild.tool.gnu.cpp.compiler.macosx.exe.debug.525220116" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.macosx.exe.debug.1217723801">
 								<option id="gnu.cpp.compiler.option.include.paths.1585831299" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/contrib}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/.unittest-gtest/gtest-1.6.0/fused-src}&quot;"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.1415787617" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
 							</tool>
@@ -85,11 +85,8 @@
 							</tool>
 						</toolChain>
 					</folderInfo>
-					<fileInfo id="cdt.managedbuild.config.gnu.macosx.exe.debug.766474997.895159641" name="foo.c" rcbsApplicability="disable" resourcePath="src/foo.c" toolsToInvoke="cdt.managedbuild.tool.gnu.c.compiler.macosx.exe.debug.1773962231.1926882485">
-						<tool id="cdt.managedbuild.tool.gnu.c.compiler.macosx.exe.debug.1773962231.1926882485" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.macosx.exe.debug.1773962231"/>
-					</fileInfo>
 					<sourceEntries>
-						<entry excluding="test|src" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name=".unittest-gtest/gtest-1.6.0/fused-src"/>
 						<entry excluding="foo.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src"/>
 						<entry excluding="FooTest.cpp" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="test"/>
 					</sourceEntries>
