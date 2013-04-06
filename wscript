@@ -5,18 +5,12 @@ APPNAME = "nerd-golf-tracker"
 VERSION = "0.1"
 
 def options(opt):
-    opt.load('compiler_c compiler_cxx waf_unit_test')
+    opt.load('compiler_c compiler_cxx unittest_gtest')
 
 def configure(ctx):
-    ctx.load('compiler_c compiler_cxx waf_unit_test')
+    ctx.load('compiler_c compiler_cxx unittest_gtest')
 
 def build(ctx):
-    from waflib.Tools import waf_unit_test
-    ctx.add_post_fun(waf_unit_test.summary)
-    ctx.stlib(
-    	source='contrib/gtest/gtest-all.cc', 
-    	includes='contrib', 
-    	target='Gtest')
     ctx.stlib(
     	source=ctx.path.ant_glob('src/*.c', excl=['Foo.c']), 
     	includes='src',
@@ -27,9 +21,9 @@ def build(ctx):
     	target='Main',
         use='MainLib')
     ctx.program(
-    	features='test',
-    	source=ctx.path.ant_glob(['test/*.cpp']),
+    	features='gtest',
+    	source=ctx.path.ant_glob('test/BarTest.cpp', excl=['AllTests.cpp']),
     	target='testMain',
-    	includes='contrib src',
-    	use='Gtest MainLib',
+    	includes='src',
+    	use='MainLib GTEST',
     	stlibpath=['build'])
