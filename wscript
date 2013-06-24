@@ -13,6 +13,7 @@ def configure(ctx):
 def build(ctx):
     from waflib.Tools import waf_unit_test
     ctx.add_post_fun(waf_unit_test.summary)
+    ctx.add_post_fun(waf_unit_test.set_exit_code)
     ctx.stlib(
     	source='contrib/gtest/gtest-all.cc', 
     	includes='contrib', 
